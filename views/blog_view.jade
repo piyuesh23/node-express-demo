@@ -1,0 +1,13 @@
+h1= title
+#article-content
+  div.body= article_body
+  - each article_comment in article_comments
+    div.author!= "Posted By: " + article_comment.author
+    div.comment!= "Comment: " + article_comment.comment
+form( method="post")
+  div
+    div
+      span Comment :
+      textarea( name="commentBody", rows=4, id="editCommentBody)
+    div#editArticleSubmit
+      input(type="submit", value="Comment")

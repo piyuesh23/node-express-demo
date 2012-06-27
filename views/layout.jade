@@ -1,0 +1,23 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml', lang="en", xml:lang="en")
+  != partial('includes/header')
+
+    div.navbar
+        div.navbar-inner
+          div.container
+            div.nav-collapse
+              ul.nav
+                li.active
+                  a(href='#') Home
+                li(class="divider-vertical")
+                li
+                  a(href='#about') About
+                li(class="divider-vertical")
+                li
+                  a(href='#contact') Contact
+              form.pull-right(method="post", id="loginForm")
+                input.input-small(id="username", type="text", name="User", placeholder="Username")
+                input.input-small(id="password", type="password", name="Password", placeholder="Password")
+                input.btn.primary(type="submit", value="Sign In")
+              p#loginPrompt.pull-right.login-prompt
+    != partial('includes/footer')
